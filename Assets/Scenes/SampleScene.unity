@@ -34240,6 +34240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1527488624}
+  playerMovement: {fileID: 1900725817}
 --- !u!1001 &790033887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53517,6 +53518,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1882865279}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1900725817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 469553965889624790, guid: 3673a89c30dc64e438dbf1419bf61114,
+    type: 3}
+  m_PrefabInstance: {fileID: 2546889638346045710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694f36e84a3cabc44ac71dd772fdefdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1902198382
 PrefabInstance:
   m_ObjectHideFlags: 0
