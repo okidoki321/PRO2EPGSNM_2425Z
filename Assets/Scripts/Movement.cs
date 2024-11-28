@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CollectibleCounter))]
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
@@ -19,7 +20,7 @@ public class Movement : MonoBehaviour
     bool isLeftShift;
     float moveHorizontal;
     float moveVertical;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,7 +38,7 @@ public class Movement : MonoBehaviour
         {
             sr.flipX = false;
         }
-        else if(moveHorizontal < 0)
+        else if (moveHorizontal < 0)
         {
             sr.flipX = true;
         }
@@ -55,7 +56,7 @@ public class Movement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * upForce);
             isGrounded = false;
-            anim.SetBool("isGrounded",false);
+            anim.SetBool("isGrounded", false);
             anim.SetTrigger("jump");
         }
 
@@ -66,12 +67,12 @@ public class Movement : MonoBehaviour
         if (isLeftShift)
         {
             float normalizedSpeed = runSpeed * Time.deltaTime;
-            rb.velocity = new Vector3(moveHorizontal * normalizedSpeed, rb.velocity.y,moveVertical * normalizedSpeed);
+            rb.velocity = new Vector3(moveHorizontal * normalizedSpeed, rb.velocity.y, moveVertical * normalizedSpeed);
         }
-        else 
+        else
         {
             float normalizedSpeed = speed * Time.deltaTime;
-            rb.velocity = new Vector3(moveHorizontal * normalizedSpeed, rb.velocity.y,moveVertical * normalizedSpeed);
+            rb.velocity = new Vector3(moveHorizontal * normalizedSpeed, rb.velocity.y, moveVertical * normalizedSpeed);
         }
     }
 
@@ -79,7 +80,7 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
-        anim.SetBool("isGrounded",true);
+        anim.SetBool("isGrounded", true);
     }
 
     public void Save()
@@ -88,4 +89,13 @@ public class Movement : MonoBehaviour
         SaveData.instance.playerY = transform.position.y;
         SaveData.instance.playerZ = transform.position.z;
     }
+
+    public void Load()
+        {
+
+          transform.position = new Vector3(SaveData.instance.playerX,
+                                           SaveData.instance.playerY,                 
+                                           SaveData.instance.playerZ);
+        }
+
 }

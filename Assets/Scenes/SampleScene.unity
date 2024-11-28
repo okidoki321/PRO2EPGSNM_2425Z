@@ -42202,6 +42202,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1228806012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231358251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4062257922527599779, guid: 3673a89c30dc64e438dbf1419bf61114,
+    type: 3}
+  m_PrefabInstance: {fileID: 2546889638346045710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1235582311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48893,6 +48899,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1527488624}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1646535857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53524,12 +53542,25 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2546889638346045710}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1231358251}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 694f36e84a3cabc44ac71dd772fdefdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1900725822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231358251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8ab98d27291dd47b52ab750ccb699d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 0
 --- !u!1001 &1902198382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58307,10 +58338,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 4062257922527599779, guid: 3673a89c30dc64e438dbf1419bf61114,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4062257922527599779, guid: 3673a89c30dc64e438dbf1419bf61114,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1900725822}
   m_SourcePrefab: {fileID: 100100000, guid: 3673a89c30dc64e438dbf1419bf61114, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
