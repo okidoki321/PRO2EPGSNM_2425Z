@@ -34241,6 +34241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1527488624}
   playerMovement: {fileID: 1900725817}
+  collectibleCounter: {fileID: 1900725822}
 --- !u!1001 &790033887
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class Menycontrorel : MonoBehaviour
 {
     public GameObject menuPanel; 
     public Movement playerMovement;
-
+    public CollectibleCounter collectibleCounter;
 
 
 
@@ -33,6 +33,7 @@ public class Menycontrorel : MonoBehaviour
         {
             DataSerializer.Load();
             playerMovement.Load();
+            collectibleCounter.Load();
         }
 
     }
@@ -44,9 +45,10 @@ public class Menycontrorel : MonoBehaviour
     public void save()
     {
         //fill save data
-
+        collectibleCounter.Save();
         playerMovement.Save();
         DataSerializer.Save();
+       
 
     }
 }
